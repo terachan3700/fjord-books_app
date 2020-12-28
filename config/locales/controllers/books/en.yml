@@ -1,0 +1,4 @@
+en:
+  create_success: Book was successfully created.
+  update_success: Book was successfully updated.
+  delete_success: Book was successfully destroyed.
