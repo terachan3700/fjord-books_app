@@ -15,4 +15,17 @@ class User < ApplicationRecord
       user.uid = auth[:uid]
     end
   end
+
+  def update_with_password(params, *options)
+    # OAuth認証のユーザーでパスワード以外の変更は現在のパスワードを不要とする
+    if provider.present? && params[:password].blank?
+      params.delete(:current_password)
+      params.delete(:password)
+      params.delete(:password_confirmation) if params[:password_confirmation].blank?
+
+      update(params, *options)
+    else
+      super
+    end
+  end
 end
