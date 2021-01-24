@@ -18,7 +18,4 @@
   <%= @user.self_introduction %>
 </p>
 
-<% if @login_user %>
-  <%= link_to t('views.common.edit'), edit_user_registration_path(@user) %> |
-<% end %>
 <%= link_to t('views.common.back'), users_path %>
