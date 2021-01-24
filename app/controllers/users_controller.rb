@@ -7,5 +7,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @login_user = true if current_user.id == @user.id
   end
 end
