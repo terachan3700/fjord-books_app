@@ -1,0 +1,9 @@
+ja:
+  index: 本の一覧
+  delete_confirm: 削除してよろしいでしょうか？
+  new_book: 本の新規登録
+  show: 詳細
+  edit: 修正
+  destroy: 削除
+  back: 戻る
+  editing_book: 本の登録データの修正
